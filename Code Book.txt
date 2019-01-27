@@ -1,0 +1,16 @@
+This code book describes the variable names in tidy data set.
+
+activity			the activity by volunteer that was identified according to the signal values in this observation
+t			time domain signals
+f			frequency domain signals
+BodyAcc-XYZ		body acceleration signals
+GravityACC-XYZ		gravity acceleration signals
+BodyGyro-XYZ		body angular signals
+GravityGyro-XYZ		gravity angular signals
+Jerk			Jerk signals
+Mag			magnitude of three-dimensional signals
+
+The set of variables that were estimated from these signals are: 
+
+mean(): Mean value
+std(): Standard deviation
