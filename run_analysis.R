@@ -25,4 +25,4 @@ data_set <- cbind(subjects,data_set)
 colnames(data_set)[1] <- "subject"
 tidy_data <- aggregate(data_set[,3:68],list(data_set$subject,data_set$activity),mean)
 colnames(tidy_data)[1:2] <- c("subject","activity")
-write.table(tidy_data, "tidy_data.txt", row.name=FALSE)
+write.table(tidy_data[order(tidy_data$subject),], "tidy_data.txt", row.name=FALSE)

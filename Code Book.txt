@@ -1,7 +1,10 @@
 This code book describes the variable names in tidy data set.
 
+##Identifier
 subject			the ID of subject who carried out the activity
 activity			the activity that was identified according to the signal values in this observation
+
+##Measurement
 t			time domain signals
 f			frequency domain signals
 BodyAcc-XYZ		body acceleration signals
