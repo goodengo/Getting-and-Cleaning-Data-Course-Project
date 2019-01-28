@@ -1,6 +1,7 @@
 This code book describes the variable names in tidy data set.
 
-activity			the activity by volunteer that was identified according to the signal values in this observation
+subject			the ID of subject who carried out the activity
+activity			the activity that was identified according to the signal values in this observation
 t			time domain signals
 f			frequency domain signals
 BodyAcc-XYZ		body acceleration signals

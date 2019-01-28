@@ -18,6 +18,11 @@ activity_labels <- join(activities,labels)
 data_set <- cbind(activity_labels$V2,extract)
 colnames(data_set)[1] <- "activity"
 #5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-tidy_data <- aggregate(data_set[,2:67],list(data_set$activity),mean)
-colnames(tidy_data)[1] <- "activity"
+subject_test <- read.table("UCI HAR Dataset/test/subject_test.txt", header=FALSE)
+subject_train <- read.table("UCI HAR Dataset/train/subject_train.txt", header=FALSE)
+subjects <- rbind(subject_train,subject_test)
+data_set <- cbind(subjects,data_set)
+colnames(data_set)[1] <- "subject"
+tidy_data <- aggregate(data_set[,3:68],list(data_set$subject,data_set$activity),mean)
+colnames(tidy_data)[1:2] <- c("subject","activity")
 write.table(tidy_data, "tidy_data.txt", row.name=FALSE)
